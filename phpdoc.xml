@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<phpdocumentor
+        configVersion="3"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns="https://www.phpdoc.org"
+>
+    <title>Micro Framework</title>
+    <paths>
+        <output>docs/.build</output>
+    </paths>
+
+    <versions>
+        <version number="0.1">
+            <folder>src/</folder>
+            <api format="php">
+                <source dsn="..">
+                    <path>Kernel/src/**/*Interface.php</path>
+                </source>
+                <default-package-name>kernel</default-package-name>
+                <visibility>api</visibility>
+                <!--Optional:-->
+                <ignore hidden="true" symlinks="true">
+                    <path>../Kernel/src/tests/**/*</path>
+                    <path>../Kernel/vendor/</path>
+                </ignore>
+                <extensions>
+                    <extension>php</extension>
+                </extensions>
+            </api>
+            <api format="php">
+                <source dsn="..">
+                    <path>KernelApp/src/*Interface.php</path>
+                </source>
+                <default-package-name>kernel-app</default-package-name>
+                <visibility>api</visibility>
+                <!--Optional:-->
+                <ignore hidden="true" symlinks="true">
+                    <path>../KernelApp/src/tests/**/*</path>
+                    <path>../KernelApp/vendor/</path>
+                </ignore>
+                <extensions>
+                    <extension>php</extension>
+                </extensions>
+            </api>
+            <api format="php">
+                <source dsn="..">
+                    <path>App/src/*.php</path>
+                </source>
+                <default-package-name>skeleton</default-package-name>
+                <visibility>api</visibility>
+                <!--Optional:-->
+                <ignore hidden="true" symlinks="true">
+                    <path>../App/src/tests/**/*</path>
+                    <path>../App/vendor/</path>
+                </ignore>
+                <extensions>
+                    <extension>php</extension>
+                </extensions>
+            </api>
+        </version>
+    </versions>
+</phpdocumentor>
