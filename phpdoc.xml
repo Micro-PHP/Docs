@@ -57,6 +57,54 @@
                     <extension>php</extension>
                 </extensions>
             </api>
+            <api format="php">
+                <source dsn="..">
+                    <path>DependencyInjection/src/**/*.php</path>
+                </source>
+                <default-package-name>dependency-injection</default-package-name>
+                <visibility>api</visibility>
+                <!--Optional:-->
+                <ignore hidden="true" symlinks="true">
+                    <path>../App/src/tests/**/*</path>
+                    <path>../App/vendor/</path>
+                </ignore>
+                <extensions>
+                    <extension>php</extension>
+                </extensions>
+            </api>
+            <api format="php">
+                <source dsn="..">
+                    <path>PluginConsole/src/**/*.php</path>
+                </source>
+                <default-package-name>plugin-console</default-package-name>
+                <visibility>api</visibility>
+                <!--Optional:-->
+                <ignore hidden="true" symlinks="true">
+                    <path>../PluginConsole/src/tests/**/*</path>
+                    <path>../PluginConsole/vendor/</path>
+                </ignore>
+                <extensions>
+                    <extension>php</extension>
+                </extensions>
+            </api>
+            <api format="php">
+                <source dsn="..">
+                    <path>PluginDoctrine/src/**/*FacadeInterface.php</path>
+                    <path>PluginDoctrine/src/*Plugin.php</path>
+                    <path>PluginDoctrine/src/*Interface.php</path>
+                    <path>PluginDoctrine/src/Configuration/**/*Configuration.php</path>
+                </source>
+                <default-package-name>plugin-doctrine</default-package-name>
+                <visibility>api</visibility>
+                <!--Optional:-->
+                <ignore hidden="true" symlinks="true">
+                    <path>../PluginDoctrine/src/tests/**/*</path>
+                    <path>../PluginDoctrine/vendor/</path>
+                </ignore>
+                <extensions>
+                    <extension>php</extension>
+                </extensions>
+            </api>
         </version>
     </versions>
 </phpdocumentor>
